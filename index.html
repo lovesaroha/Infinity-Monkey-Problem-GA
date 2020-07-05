@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Infinite Monkey Problem</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/all.min.css">
+</head>
+
+<body style="padding-top: 60px; padding-bottom: 60px;">
+    <div class="container mb-4 mt-4">
+        <div class="row">
+            <div class="col-md-6">
+                <!-- Title -->
+                <h1 style="font-size: 3.5rem;">
+                    <font class="text-primary">I</font>nfinite <font class="text-primary">M</font>onkey <font
+                        class="text-primary">P</font>roblem <small class="text-muted"> ( Genetic Algorithm )</small>
+                </h1>
+                <h4>The infinite monkey theorem states that a monkey hitting keys
+                    at
+                    random on a typewriter keyboard for an infinite amount of time will almost surely type any given
+                    text,
+                    such as the complete works of William Shakespeare. <a href="https://en.wikipedia.org/wiki/Infinite_monkey_theorem" target="_blank">See More</a></h4>
+                <div class="mt-2 card shadow-sm">
+                    <div class="card-body">
+                    <h4>Love Saroha <br><font class="text-primary"><i class="fad fa-envelope"></i> lovesaroha1994@gmail.com</font></h4>
+                    <h4>Source Code <br><a href="https://github.com/lovesaroha/Infinity-Monkey-Problem-GA" target="_blank"><i class="fad fa-code-merge text-primary"></i> https://github.com/lovesaroha/Infinity-Monkey-Problem-GA</a></h4>
+                    <h4>Website <br><a href="https://lovesaroha.com"><i class="fad fa-link text-primary"></i> www.lovesaroha.com</a></h4>
+                    </div>
+                </div>    
+            </div>
+            <div class="col-md-6">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <form onsubmit="javascript: start(event)">
+                            <div class="form-group">
+                                <!-- Phrase -->
+                                <h4>Phrase</h4>
+                                <input type="text" name="phrase" class="form-control" id="phrase_input_id"
+                                    placeholder="Enter phrase here.." required>
+                            </div>
+                            <div class="form-group">
+                                <!-- Change population size -->
+                                <h4>Population Size</h4>
+                                <select class="custom-select" id="maxpop_id"
+                                    oninput="javascript: newMaxPop = parseInt(this.value);">
+                                    <option selected value="100">100</option>
+                                    <option value="200">200</option>
+                                    <option value="300">300</option>
+                                    <option value="400">400</option>
+                                    <option value="600">600</option>
+                                    <option value="800">800</option>
+                                    <option value="1000">1000</option>
+                                    <option value="2000">2000</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <!-- Change mutation rate -->
+                                <h4>Mutation Rate</h4>
+                                <select class="custom-select" id="mutation_rate_id"
+                                    oninput="javascript: newMutationRate = parseFloat(this.value);">
+                                    <option selected value="0.01">0.01</option>
+                                    <option value="0.05">0.05</option>
+                                    <option value="0.08">0.08</option>
+                                    <option value="0.1">0.1</option>
+                                    <option value="0.3">0.3</option>
+                                    <option value="0.9">0.9</option>
+                                    <option value="2.9">2.9</option>
+                                    <option value="4.9">4.9</option>
+                                    <option value="6.9">6.9</option>
+                                    <option value="16.9">16.9</option>
+                                    <option value="36.9">36.9</option>
+                                    <option value="56.9">56.9</option>
+                                    <option value="76.9">76.9</option>
+                                    <option value="96.9">96.9</option>
+                                    <option value="99.9">99.9</option>
+                                </select>
+                            </div>
+                            <div class="mb-4 d-none" id="result_box_id">
+                                <!-- Result info -->
+                                <h3 class="bold">Result</h4>
+                                <div  id="result_id">
+                                        <h4>Generations <font id="generations_id"
+                                                class="text-primary">0</font></h4>
+                                        <h4>Average Fitness <font id="avgfitness_id"
+                                                class="text-primary">0</font></h4>
+                                    <div class="jumbotron p-2" id="best_phrase_id"></div>
+                                    <div id="est_time_id"></div>
+                                </div>
+                            </div>
+                            <!-- Start algo -->
+                            <button class="btn btn-primary" id="submit_id"
+                                onclick="javascript: this.childNodes[1].data = ' ReStart';" type="submit"><i
+                                    class="fal fa-play"></i> START</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Include script.js file -->
+    <script type="text/javascript" src="./assets/js/script.js"></script>
+</body>
+
+</html>
